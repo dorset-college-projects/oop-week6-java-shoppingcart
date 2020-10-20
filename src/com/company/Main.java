@@ -18,10 +18,19 @@ public class Main {
 
         shoppingCart.products.add(p);
         shoppingCart.products.add(p1);
+        shoppingCart.products.add(p1);
+        shoppingCart.products.add(p1);
+        shoppingCart.products.add(p1);
+        shoppingCart.products.add(p);
+
 
         double TotalPrice = shoppingCart.CalculateTotalPrice();
 
         System.out.println(TotalPrice);
+
+        shoppingCart.WriteCartToFile();
+
+        shoppingCart.ReadCartFromFile();
 
 
     }
