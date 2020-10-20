@@ -46,8 +46,8 @@ public class Cart {
 
     }
 
-    public void ReadCartFromFile() {
-
+    public double ReadCartFromFile() {
+        products = new ArrayList<Product>();
         try {
             File myShoppingCartFile = new File("shopping.txt");
             Scanner myReader = new Scanner(myShoppingCartFile);
@@ -57,6 +57,8 @@ public class Cart {
                 System.out.println(data);
                 // Can you create the cart and calculate total prices
 
+
+
             }
 
             myReader.close();
@@ -64,6 +66,8 @@ public class Cart {
 
             System.out.println("File not found");
         }
+
+        return CalculateTotalPrice();
 
     }
 }

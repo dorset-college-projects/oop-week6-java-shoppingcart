@@ -30,7 +30,8 @@ public class Main {
 
         shoppingCart.WriteCartToFile();
 
-        shoppingCart.ReadCartFromFile();
+        TotalPrice = shoppingCart.ReadCartFromFile();
+        System.out.println(TotalPrice);
 
 
     }
