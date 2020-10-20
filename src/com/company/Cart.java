@@ -48,14 +48,21 @@ public class Cart {
 
     public double ReadCartFromFile() {
         products = new ArrayList<Product>();
+        Pricing pricing = new Pricing();
         try {
             File myShoppingCartFile = new File("shopping.txt");
             Scanner myReader = new Scanner(myShoppingCartFile);
 
             while(myReader.hasNextLine()) {
-                String data = myReader.nextLine();
-                System.out.println(data);
+                String productItem = myReader.nextLine();
+                System.out.println(productItem);
                 // Can you create the cart and calculate total prices
+
+                Product p = new Product();
+                p.setName(productItem);
+                p.setPrice(pricing.getProductPrice(productItem));
+
+                products.add(p);
 
 
 
